@@ -1,0 +1,21 @@
+.header {
+    background-color: #026634;
+    color: #ffffff;
+    height: 60px;
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header__wrapper {
+    width: 68%;
+    margin: auto;
+}
+
+.header__item_ctn {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,38 @@
+.sidebar {
+    background-color: #8DC4A6;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    width: 15%;
+    font-size: 1.6rem;
+    padding-top: 1px;
+}
+
+.sidebar__item {
+    padding: 2rem 1rem;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #026634;
+    cursor: pointer;
+    transition: all ease-in-out 100ms;
+}
+
+.sidebar__item:hover {
+    background-color: #026634;
+    color: #ffffff;
+}
+
+.sidebar__item.active {
+    background-color: #026634;
+    color: #ffffff;
+}
+
+.sidebar__subitem {
+    padding: 2rem;
+    background-color: #218639;
+    color: #ffffff;
+}
+
+.sidebar__submenu.close {
+    display: none;
+}
