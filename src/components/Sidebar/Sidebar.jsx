@@ -20,14 +20,14 @@ function Sidebar ({restaurants, menus, categories}) {
                             </Link>
                         ))}
                     </div>
-                    <Link to="/menus"><li className={`sidebar__item ${pathname.startsWith('/menus') ? 'active' : ''}`}>Menus</li></Link>
+                    {/* <Link to="/menus"><li className={`sidebar__item ${pathname.startsWith('/menus') ? 'active' : ''}`}>Menus</li></Link>
                     <div className={`sidebar__submenu ${!pathname.startsWith('/menus') ? 'close' : ''}`}>
                         {menus && menus.map((menu) => (
                             <Link to={`/menus/${menu.id}`} key={menu.id}>
                                 <li className={`sidebar__item sidebar__subitem ${pathname === `/menus/${menu.id}` ? 'active' : ''}`}>{menu.name}</li>
                             </Link>
                         ))}
-                    </div>
+                    </div> */}
                     <Link to="/categories"><li className={`sidebar__item ${pathname.startsWith('/categories') ? 'active' : ''}`}>Catégories</li></Link>
                     <div className={`sidebar__submenu ${!pathname.startsWith('/categories') ? 'close' : ''}`}>
                         {categories && categories.map((categorie) => (

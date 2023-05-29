@@ -1,12 +1,15 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { supabase } from '../../external/supabase/supabaseClient';
+import AddCategory from '../../components/Modals/AddCategory/AddCategory';
+import CategoryToAdd from '../../components/Modals/CategoryToAdd/CategoryToAdd';
 
 function RestaurantDetails() {
   const { id } = useParams();
   const [restaurantDetails, setRestaurantDetails] = useState('')
   const [imageFile, setImageFile] = useState(null);
   const [imageUrl, setImageUrl] = useState('');
+  const [categories, setCategories] = useState(null)
   const date = new Date()
 
   useEffect(() => {
@@ -27,13 +30,29 @@ function RestaurantDetails() {
       
     }
 
+    async function getCategoriesByRestaurant(id) {
+        
+      const { data, error } = await supabase
+      .from('restaurant')
+      .select(`
+        category (
+          name
+        )
+      `)
+      .eq('id', id)
+      .single();
+
+      setCategories(data.category)
+
+    }
 
     getRestaurantDetail(id)
+    getCategoriesByRestaurant(id)
   }, [id])
 
 
-  const getRestaurantImageUrl = (image) => {
-      const url = 'restaurants/' + image
+  const getRestaurantImageUrl = (imageName) => {
+      const url = 'restaurants/' + imageName
       const {data} = supabase
       .storage
       .from('quickcafet')
@@ -42,7 +61,6 @@ function RestaurantDetails() {
       setImageUrl(data.publicUrl)
   }
   
-
   const handleNameChange = (event) => {
     setRestaurantDetails({
       ...restaurantDetails,
@@ -76,7 +94,7 @@ function RestaurantDetails() {
         .update({
           name: restaurantDetails.name,
           address: restaurantDetails.address,
-          image: restaurantDetails.name,
+          image: restaurantDetails.image,
           updated_at: formatedDate,
         })
         .eq('id', restaurantDetails.id);
@@ -98,8 +116,13 @@ function RestaurantDetails() {
       if (error) {
         console.error('Erreur lors de l\'enregistrement de l\'image :', error.message);
       }
+
+      getRestaurantImageUrl(imageFile.name)
+
     }
   }
+
+  console.log(categories);
 
   return (
     <>  
@@ -135,6 +158,20 @@ function RestaurantDetails() {
             <button type="submit">Enregistrer</button>
           </p>
         </form>
+
+        <div>
+          <button>Ajouter une catégorie</button>
+          <div className="tagsCtn">
+            {categories && categories.map((category) => (
+              <div className="tag" key={category.id}>{category.name}</div>
+            ))}
+          </div>
+        </div>
+
+        <AddCategory/>
+        <CategoryToAdd/>
+        
+
       </div>
     </>
   );
