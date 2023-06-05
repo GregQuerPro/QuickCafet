@@ -1,0 +1,36 @@
+.form__row {
+    display: flex;
+    gap: 2rem;
+}
+
+.input__file {
+    background-color: lightgrey;
+}
+
+.btn__save {
+    background-color: #026634;
+    color: #ffffff;
+    border: none;
+    padding: 1rem;
+    position: fixed;
+    top: 15%;
+    right: 10%;
+}
+
+.btn__add_category {
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: 1px solid #026634;
+    color: #026634;
+    background: none;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+}
+
+.btn__add_category:hover {
+    background: #026634;
+    color: #ffffff;
+    cursor: pointer;
+}

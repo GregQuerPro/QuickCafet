@@ -1,4 +1,49 @@
 .modal__add_category {
-    outline: 1px solid black;
+    outline: 1px solid #026634;
     width: 50%;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+}
+
+.modal__add_top {
+    background: #026634;
+    padding: 1rem 2rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__close {
+    background-color: #F7F7F7;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal__add_body {
+    padding: 1rem 2rem;
+}
+
+.input__text {
+    background-color: #F7F7F7;
+    padding: 1.4rem;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.input__text:focus {
+    outline: 1px solid transparent;
+}
+
+.input__label {
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.btn__add_category {
+    margin-top: 1rem;
 }

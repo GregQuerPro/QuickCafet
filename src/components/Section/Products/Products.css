@@ -1,0 +1,31 @@
+.products {
+    border-radius: .5rem;
+    outline: 1px solid green;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products__btn {
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: 1px solid #026634;
+    color: #026634;
+    background: none;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.products__btn:hover {
+    background: #026634;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.products__any_ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

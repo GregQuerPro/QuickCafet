@@ -27,3 +27,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.front__bloc {
+    margin-top: 160px;
+}

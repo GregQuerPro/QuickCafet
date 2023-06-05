@@ -1,0 +1,160 @@
+.modal__add_product {
+    outline: 1px solid #026634;
+    width: 50%;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+
+.modal__add_top {
+    background: #026634;
+    padding: 1rem 2rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__close {
+    background-color: #F7F7F7;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal__add_body {
+    padding: 1rem 2rem;
+}
+
+.input__text {
+    background-color: #F7F7F7;
+    padding: 1.4rem;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.input__text:focus {
+    outline: 1px solid transparent;
+}
+
+.input__textarea {
+    min-height: 200px;
+    background-color: #F7F7F7;
+    padding: 1.4rem;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.input__label {
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.btn__add_category {
+    margin-top: 1rem;
+}
+
+.ingredients {
+    margin-top: 2rem;
+}
+
+.ingredients__ctn {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.ingredient__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.8rem 1rem;
+    background-color: #F7F7F7;
+    border-radius: .5rem;
+
+}
+
+.ingredient__delete {
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: #026634;
+}
+
+.variations__item {
+    padding: 1.8rem 1rem;
+    background-color: #F7F7F7;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.input__text--white {
+    background-color: white;
+    border-radius: .5rem;
+}
+
+.variations__delete {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: #026634;
+}
+
+.variations__name {
+    margin-top: 0;
+}
+
+.option__item {
+    padding: 2rem 1rem;
+    background-color: white;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input__number {
+    background-color: lightgrey;
+    border-radius: 1rem;
+    border: none;
+    width: 40px;
+    height: 35px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.price__ctn {
+    position: relative;
+}
+
+.price__ctn::after {
+    content: '€';
+    position: absolute;
+    right: -12px;
+    font-weight: bold;
+    top: 48%;
+    transform: translateY(-50%);
+}
+
+.extra {
+    margin-top: 2rem;
+}

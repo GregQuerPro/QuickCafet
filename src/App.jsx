@@ -10,6 +10,7 @@ import Categories from './pages/Categories/Categories.jsx'
 import RestaurantDetails from './pages/Restaurants/RestaurantDetails';
 import MenuDetails from './pages/Menus/MenuDetails';
 import CategorieDetails from './pages/Categories/CategorieDetails';
+import Home from './pages/Home/Home';
 
 function App() {
 
@@ -67,12 +68,14 @@ function App() {
 
   }, [])
 
+
   return (
     <>
     <Router>
       <Header/>
-      <Sidebar restaurants={restaurantData} menus={menuData} categories={categorieData}/>
+      {location.pathname !== "/home" && <Sidebar restaurants={restaurantData} menus={menuData} categories={categorieData} />}
       <Routes>
+        <Route path="/home" element={<Home />} />
         <Route path="/restaurants/:id" element={<RestaurantDetails />} />
         <Route path="/restaurants" element={<Restaurants />} />
         <Route path="/menus/:id" element={<MenuDetails />} />

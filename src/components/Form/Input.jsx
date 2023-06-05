@@ -1,12 +1,14 @@
 import './Input.css'
 
-function Input () {
-
+function Input({ label, value, onChange }) {
     return (
-        <>
-            
-        </>
-    )
-}
-
-export default Input
+      <>
+        <p>
+          <label htmlFor={label} className="input__label">{label}</label><br />
+          <input type="text" id={label} name={label} value={value} onChange={onChange} className="input__text"/>
+        </p>
+      </>
+    );
+  }
+  
+  export default Input;

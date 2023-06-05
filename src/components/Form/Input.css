@@ -1,0 +1,16 @@
+.input__text {
+    background-color: #F7F7F7;
+    padding: 1.4rem;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.input__text:focus {
+    outline: 1px solid transparent;
+}
+
+.input__label {
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}

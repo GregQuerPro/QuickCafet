@@ -1,0 +1,26 @@
+.tag {
+    font-size: 1.8rem;
+    padding: .8rem 1.5rem;
+    outline: 1px solid #026634;
+    display: inline-block;
+    margin-right: 1.6rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.tag__delete {
+    width: 25px;
+    display: inline-block;
+    height: 25px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: #026634;
+}
+
+.tag.active {
+    background-color: #026634;
+    color: #ffffff;
+}
