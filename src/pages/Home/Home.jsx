@@ -25,7 +25,7 @@ function Home () {
           getProductsByCategory(data.category[0])
     
         }
-
+        
         async function getProductsByCategory(category) {
             const { data, error } = await supabase
             .from('product')
