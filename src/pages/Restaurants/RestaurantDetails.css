@@ -34,3 +34,8 @@
     color: #ffffff;
     cursor: pointer;
 }
+
+.tagsCtn {
+    display: flex;
+    flex-wrap: wrap;
+}

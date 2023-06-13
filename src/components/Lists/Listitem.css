@@ -1,0 +1,30 @@
+.list__item {
+    background-color: #F7F7F7;
+    width: 100%;
+    padding: 2rem 2rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list__item:hover {
+    outline: 1px solid #026634;
+    cursor: pointer;
+}
+
+.list__item_options {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.list__item_edit {
+    color: #3e9ae1;
+}
+
+.list__item_delete {
+    color: #CC0505;
+}

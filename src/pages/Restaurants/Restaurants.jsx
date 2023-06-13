@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../../external/supabase/supabaseClient';
 import './Restaurants.css'
 import Button from '../../components/Buttons/Button'
+import Listitem from '../../components/Lists/Listitem';
 
 function Restaurants () {
 
@@ -28,11 +29,13 @@ function Restaurants () {
     return (
         <>
             <div className="content">
+              <div className='restaurants__top'>
                 <h1>Restaurants</h1>
                 <Button />
+              </div>
                 <div className='list'>
                     {restaurants && restaurants.map((restaurant) => (
-                        <div className='list__item' key={restaurant.id}>{restaurant.name}</div>
+                      <Listitem item={restaurant} />
                     ))}
                 </div>
             </div>

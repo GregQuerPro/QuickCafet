@@ -1,8 +1,11 @@
 .tag {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: .8rem 1.5rem;
     outline: 1px solid #026634;
-    display: inline-block;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
     margin-right: 1.6rem;
     border-radius: 5px;
     margin-bottom: 2rem;
@@ -11,7 +14,9 @@
 
 .tag__delete {
     width: 25px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 25px;
     background-color: rgb(235, 235, 235);
     border-radius: 50%;

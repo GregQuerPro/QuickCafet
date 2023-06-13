@@ -14,7 +14,10 @@ function Tags ({name, categories, setCategories, activeCategory, setActiveCatego
 
     return (
         <>
-            <span className={`tag ${activeCategory === name ? 'active' : ''}`} onClick={() => setActiveCategory(name)}>{name} <span className='tag__delete' onClick={handleDeleteCategory}>x</span></span>
+            <div className={`tag ${activeCategory === name ? 'active' : ''}`} onClick={() => setActiveCategory(name)}>
+                <span>{name}</span> 
+                <span className='tag__delete' onClick={handleDeleteCategory}>x</span>
+            </div>
         </>
     )
 

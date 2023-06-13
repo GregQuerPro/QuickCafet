@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .products__btn {
@@ -24,8 +25,48 @@
     cursor: pointer;
 }
 
-.products__any_ctn {
+.products__any_products {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.products__any_ctn {
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    padding-right: 1rem;
+    overflow-y: scroll;
+}
+
+/* Styles spécifiques pour WebKit (Safari et Chrome) */
+.products__any_ctn::-webkit-scrollbar {
+    width: 5px;
+    /* Largeur de la barre de défilement */
+}
+
+.products__any_ctn::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Couleur de fond de la piste de la barre de défilement */
+}
+
+.products__any_ctn::-webkit-scrollbar-thumb {
+    background: #026634;
+    /* Couleur du curseur de la barre de défilement */
+}
+
+.products__any_ctn::-webkit-scrollbar-thumb:hover {
+    background: #026634;
+    /* Couleur du curseur de la barre de défilement au survol */
+}
+
+
+.products__any_categories {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
